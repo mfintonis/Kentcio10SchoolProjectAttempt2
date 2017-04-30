@@ -1,1 +1,0 @@
-<%@ Page Title="Facebook Access Token" Language="C#" MasterPageFile="~/CMSMasterPages/UI/Dialogs/ModalDialogPage.master" AutoEventWireup="true" Inherits="CMSModules_SocialMarketing_Pages_FacebookPageAccessTokenDialog"  CodeFile="FacebookPageAccessTokenDialog.aspx.cs" Theme="Default" %>

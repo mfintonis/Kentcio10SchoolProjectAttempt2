@@ -1,2 +1,0 @@
-<%@ Control Language="C#" AutoEventWireup="true" Inherits="CMSInlineControls_MediaControl"  CodeFile="MediaControl.ascx.cs" %>
-<asp:Literal ID="ltlMedia" runat="server" EnableViewState="false" />

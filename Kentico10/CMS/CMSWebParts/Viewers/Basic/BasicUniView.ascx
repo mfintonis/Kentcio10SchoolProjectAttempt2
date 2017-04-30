@@ -1,2 +1,0 @@
-<%@ Control Language="C#" AutoEventWireup="true" Inherits="CMSWebParts_Viewers_Basic_BasicUniView"  CodeFile="~/CMSWebParts/Viewers/Basic/BasicUniView.ascx.cs" %>
-<asp:PlaceHolder runat="server" ID="plcBasicUniView" />

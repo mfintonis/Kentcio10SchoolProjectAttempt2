@@ -1,2 +1,0 @@
-<%@ Control Language="C#" AutoEventWireup="true"  CodeFile="OptionsDesigner.ascx.cs" Inherits="CMSFormControls_System_OptionsDesigner" %>
-<cms:OptionsDesigner runat="server" ID="optionDesignerElem" OnOptionAdded="optionDesignerElem_OptionAdded" />
