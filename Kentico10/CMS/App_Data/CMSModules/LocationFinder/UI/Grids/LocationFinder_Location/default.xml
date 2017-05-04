@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<grid>
+  <actions>
+    <action name="edit" caption="$General.Edit$" fonticonclass="icon-edit" fonticonstyle="allow" />
+    <action name="#delete" caption="$General.Delete$" fonticonclass="icon-bin" fonticonstyle="critical" confirmation="$General.ConfirmDelete$" />
+    <action name="#moveup" caption="$General.Up$" fonticonclass="icon-chevron-up" />
+    <action name="#movedown" caption="$General.Down$" fonticonclass="icon-chevron-down" />
+  </actions>
+  <columns>
+    <column source="LocationName" caption="Name" wrap="false" localize="false" >
+      <filter type="text" size="200" />
+    </column>
+    <column source="LocationActive" caption="Active (Click to Toggle)" wrap="false" localize="true" width="100%" externalsourcename="#yesno"  action="toggleLocationEnabled" commandargument="LocationActive" fonticonclass="icon-check" />
+    <column source="LocationStreetAddress" caption="Street Address" wrap="true" localize="true" width="100%" />
+    <column source="LocationState" caption="State" wrap="false" localize="true" width="100%" />
+    <column source="LocationTown" caption="City/Town" wrap="false" localize="true" width="100%" externalsourcename="#yesno"/>
+    <column source="LocationZip" caption="Zip" wrap="false" localize="true" width="100%" />
+  </columns>
+  <options>
+    <key name="DisplayFilter" value="true" />
+    <key name="AllowSorting" value="false" />
+  </options>
+</grid>
