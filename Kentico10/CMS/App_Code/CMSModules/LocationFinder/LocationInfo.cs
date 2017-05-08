@@ -110,23 +110,6 @@ namespace LocationFinder
 
 
         /// <summary>
-        /// Location state
-        /// </summary>
-        [DatabaseField]
-        public virtual string LocationState
-        {
-            get
-            {
-                return ValidationHelper.GetString(GetValue("LocationState"), String.Empty);
-            }
-            set
-            {
-                SetValue("LocationState", value, String.Empty);
-            }
-        }
-
-
-        /// <summary>
         /// Location town
         /// </summary>
         [DatabaseField]
@@ -144,18 +127,86 @@ namespace LocationFinder
 
 
         /// <summary>
-        /// Location zip
+        /// Location state
         /// </summary>
         [DatabaseField]
-        public virtual int LocationZip
+        public virtual string LocationState
         {
             get
             {
-                return ValidationHelper.GetInteger(GetValue("LocationZip"), 0);
+                return ValidationHelper.GetString(GetValue("LocationState"), String.Empty);
+            }
+            set
+            {
+                SetValue("LocationState", value);
+            }
+        }
+
+
+        /// <summary>
+        /// Location zip
+        /// </summary>
+        [DatabaseField]
+        public virtual string LocationZip
+        {
+            get
+            {
+                return ValidationHelper.GetString(GetValue("LocationZip"), String.Empty);
             }
             set
             {
                 SetValue("LocationZip", value);
+            }
+        }
+
+
+        /// <summary>
+        /// Location directions url
+        /// </summary>
+        [DatabaseField]
+        public virtual string LocationDirectionsUrl
+        {
+            get
+            {
+                return ValidationHelper.GetString(GetValue("LocationDirectionsUrl"), String.Empty);
+            }
+            set
+            {
+                SetValue("LocationDirectionsUrl", value, String.Empty);
+            }
+        }
+
+
+        /// <summary>
+        /// Location latitude
+        /// </summary>
+        [DatabaseField]
+        public virtual string LocationLatitude
+        {
+            get
+            {
+                return ValidationHelper.GetString(GetValue("LocationLatitude"), String.Empty);
+            }
+            set
+            {
+                SetValue("LocationLatitude", value, String.Empty);
+            }
+        }
+
+
+        /// <summary>
+        /// Location longitude
+        /// </summary>
+        [DatabaseField]
+        public virtual string LocationLongitude
+        {
+            get
+            {
+                return ValidationHelper.GetString(GetValue("LocationLongitude"), String.Empty);
+            }
+            set
+            {
+                SetValue("LocationLongitude", value, String.Empty);
             }
         }
 

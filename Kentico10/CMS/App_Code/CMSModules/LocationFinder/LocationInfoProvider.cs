@@ -4,6 +4,8 @@ using System.Data;
 using CMS.Base;
 using CMS.DataEngine;
 using CMS.Helpers;
+using System.Web;
+using System.Xml;
 
 namespace LocationFinder
 {    
@@ -146,6 +148,18 @@ namespace LocationFinder
         /// <param name="infoObj">LocationInfo to be set</param>        
         protected virtual void SetLocationInfoInternal(LocationInfo infoObj)
         {
+            string address = infoObj.LocationStreetAddress + ", " + infoObj.LocationTown + ", " + infoObj.LocationState + ", " + infoObj.LocationZip;
+            string urlAddress = "http://maps.googleapis.com/maps/api/geocode/xml?address=" + HttpUtility.UrlEncode(address) + "&sensor=false";
+            XmlDocument objXmlDocument = new XmlDocument();
+            objXmlDocument.Load(urlAddress);
+            XmlNodeList objXmlNodeList = objXmlDocument.SelectNodes("/GeocodeResponse/result/geometry/location");
+            //Get Longitude
+            infoObj.LocationLongitude = objXmlNodeList[0].ChildNodes.Item(1).InnerText;
+            //Get Latitude
+            infoObj.LocationLatitude = objXmlNodeList[0].ChildNodes.Item(0).InnerText;
+
+            infoObj.LocationDirectionsUrl = "http://maps.google.com/?q=" + HttpUtility.UrlEncode(address);
+
             SetInfo(infoObj);
         }
 
