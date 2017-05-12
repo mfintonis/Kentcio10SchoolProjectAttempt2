@@ -19,11 +19,18 @@ public class LocationFinderExtender : ControlExtender<UniGrid>
     {
         if(actionName == "toggleLocationEnabled")
         {
-            int id = (int)actionArgument;
+            int id = Convert.ToInt32(actionArgument.ToString());
             var location = LocationInfoProvider.GetLocationInfo(id);
             if(location != null)
             {
-                location.LocationActive = !location.LocationActive;
+                if(location.LocationActive == false)
+                {
+                    location.LocationActive = true;
+                }
+                else
+                {
+                    location.LocationActive = false;
+                }
                 LocationInfoProvider.SetLocationInfo(location);
             }
         }

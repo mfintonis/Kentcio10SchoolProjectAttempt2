@@ -11,7 +11,7 @@
     <column source="LocationName" caption="Name" wrap="false" localize="false" >
       <filter type="text" size="200" />
     </column>
-    <column source="LocationActive" caption="Active (Click to Toggle)" wrap="false" localize="true" externalsourcename="#yesno"  action="toggleLocationEnabled" commandargument="LocationActive" fonticonclass="icon-check" />
+    <column source="LocationActive" caption="Active (Click to Toggle)" wrap="false" localize="true" externalsourcename="#yesno"  action="toggleLocationEnabled" commandargument="LocationID" fonticonclass="icon-check" />
     <column source="LocationStreetAddress" caption="Street Address" wrap="true" localize="true" />
     <column source="LocationState" caption="State" wrap="false" localize="true" />
     <column source="LocationTown" caption="City/Town" wrap="false" localize="true" externalsourcename="#yesno"/>
